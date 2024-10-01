@@ -58,6 +58,39 @@ public class LinkedList {
         }
 
     }
+
+    public static LinkedList delete(LinkedList list, int index) {
+
+        // Create the Node objects
+
+        Node current_node = list.head, prev = null;
+
+        // If index == 0, then set next node as head
+        if (index == 0) {
+            list.head = current_node.next;
+        }
+
+        int counter = 0;
+        while (current_node != null) {
+            if (counter == index) {
+                prev.next = current_node.next;
+                break;
+            } else {
+                prev = current_node;
+                current_node = current_node.next;
+                counter++;
+            }
+        }
+
+        if (current_node == null) {
+            // this means that the given index is out of bounds
+            // of the size of the linked list.
+            System.out.printf("Given index (%d) is out of bounds from list size (%d)", index, counter);
+        }
+
+        return list;
+    }   
+
     public static void main(String[] args) {
         
         LinkedList list = new LinkedList();
@@ -68,6 +101,8 @@ public class LinkedList {
         list = insert(list, 236);
         list = insert(list, 365);
         list = insert(list, 456);
+
+        list = delete(list, 2);
 
         printList(list);
 
