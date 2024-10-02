@@ -1,6 +1,6 @@
 package org.riv.dsa;
 
-public class LinkedList {
+ public class LinkedList {
     
     Node head;
 
