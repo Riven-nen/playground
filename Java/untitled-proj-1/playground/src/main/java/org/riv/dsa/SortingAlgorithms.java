@@ -23,6 +23,7 @@ public class SortingAlgorithms {
                     array[i] = array[i] + array[j];
                     array[j] = array[i] - array[j];
                     array[i] = array[i] - array[j];
+                    
                 }
             }
         }
