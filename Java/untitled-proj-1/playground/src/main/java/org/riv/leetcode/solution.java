@@ -66,4 +66,28 @@ public class solution {
             return (sum1 + sum2) / (nums1.length + nums2.length);
         }
     }
+
+    public boolean isPalindrome(int x) {
+        String convert = Integer.toString(x);
+
+        return true;
+    }
+
+    public static int[] shiftArray(int[] array) {
+
+        if ( array.length == 0 ) {
+            return array;
+        }
+
+        int temp = array[array.length - 1];
+        for ( int i = array.length - 1; i >= -1 ; i-- ) {
+            if ( i == -1 ) {
+                array[i+1] = temp;
+            }
+            if ( i < array.length - 1 && i >= 0) {
+                array[i+1] = array[i];
+            }
+        }
+        return array;
+    }
 }
