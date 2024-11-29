@@ -1,3 +1,66 @@
 body {
     background-color: #141414;
+    font-family: sans-serif;
+    color: white;
+    align-items: center;
+}
+
+.center-div {
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    text-align: center;
+    font-size: 3.5vw;
+    font-weight: lighter;
+}
+
+@media (width < 425px) {
+    .profile-icon img {
+        width: 35vw;
+    }
+
+}
+
+@media (width >= 1024) {
+    .profile-icon img {
+        width: 40vw;
+    }
+}
+
+.profile-icon p { 
+    text-align: center;
+    color: gray;
+    font-weight: bold;
+    margin: 1%;
+    font-size: 1.3vw;
+}
+
+.profile-icon img {
+    border-radius: 5px;
+    border: 5px solid #141414;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5vw;
+}
+
+/* Hover */
+
+
+.profile-icon:hover img{
+    border: 5px solid white;
+}
+
+.profile-icon:hover p{
+    color: white;
 }
