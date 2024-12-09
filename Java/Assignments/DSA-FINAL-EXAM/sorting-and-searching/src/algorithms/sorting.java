@@ -51,7 +51,7 @@ public class sorting {
         return array;
     }
 
-    public static int[] bubbleSort(int[] array) {
+    public static int[] bubble(int[] array) {
         // Starting with the first element, the algorithm compares each element with
         // the one next to it. If the current element is greater than the next one,
         // they are swapped. This process repeats for every pair, ensuring the largest
