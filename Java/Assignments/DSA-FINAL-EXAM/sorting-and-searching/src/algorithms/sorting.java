@@ -13,6 +13,26 @@ public class sorting {
      * 8. Bucket
     */
 
+    // Insertion
+    public static int[] insertion(int[] array) {
+        // Start with index 0, incrementing for each iteration.
+        // The current index value is then compared to the preceding
+        // values with comparison operators, it will shift itself for each
+        // time the preceding value is greater than the current value
+        // and stop once the current value is greater than the preceding value
+        // meaning it has found its place in the array.
+
+        for (int i = 1; i < arr.length; i++) {
+            int currValue = arr[i];
+            int j = i - 1;
+            while (j >= 0 && arr[j] > currValue) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = currValue;
+        }
+    }
+
     // Selection Sort - compact code ver. (my ver.)
     public static int[] selection(int[] array) {
 
