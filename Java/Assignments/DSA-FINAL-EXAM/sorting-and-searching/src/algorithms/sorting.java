@@ -6,11 +6,6 @@ public class sorting {
      * 1. Insertion
      * 2. Selection
      * 3. Bubble
-     * 4. Merge
-     * 5. Quick
-     * 6. Shell
-     * 7. Radix
-     * 8. Bucket
     */
 
     // Insertion
@@ -55,4 +50,27 @@ public class sorting {
 
         return array;
     }
+
+    public static int[] bubbleSort(int[] array) {
+        // Starting with the first element, the algorithm compares each element with
+        // the one next to it. If the current element is greater than the next one,
+        // they are swapped. This process repeats for every pair, ensuring the largest
+        // element bubbles to the end of the array after each pass. It stops when no swaps
+        // are needed, meaning the array is sorted.
+
+        for (int i = 0; i < array.length - 1; i++) {
+            boolean swapped = false;
+            for (int j = 0; j < array.length - 1 - i; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+            if (!swapped) break; // Exit early if no swaps occurred in a pass
+        }
+        return array;
+    }
+
 }
